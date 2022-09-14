@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean class="com.xworkz.car.Car">
+   <constructor-arg name="brand" value="BMW"></constructor-arg>
+   <constructor-arg name = "price" value="67000"></constructor-arg>
+   </bean>
+   
+   <bean class="java.lang.Integer">
+		<constructor-arg name="value" value="12"></constructor-arg>
+	</bean>
+	
+	<bean class ="java.lang.String">
+	<constructor-arg name="value" value="Chetan"></constructor-arg>
+	</bean>
+	
+	<bean class ="java.lang.Double">
+	<constructor-arg name="value" value="450000.00"></constructor-arg>
+	</bean>
+	
+	  
+   <bean class="java.lang.Short">
+   
+		<constructor-arg name="value" value="89"></constructor-arg>
+	</bean>
+	
+	<bean class ="java.lang.Character">
+	<constructor-arg name="value" value="A"></constructor-arg>
+	</bean>
+	
+	<bean class ="java.lang.Long">
+	<constructor-arg name="value" value="8765433223566"></constructor-arg>
+	</bean>
+	
+
+</beans>

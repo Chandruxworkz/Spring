@@ -1,7 +1,14 @@
 package com.xworkz.tv;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Remote {
+	
+	@Value("Samsung")
 	private String name;
+	@Value("1000")
 	private Double price;
 
 	public Remote() {

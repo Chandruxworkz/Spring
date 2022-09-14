@@ -1,7 +1,14 @@
 package com.xworkz.tv;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class SetTopBox {
+	
+	@Value("SunDirect")
 	private	 String name;
+	@Value("4000")
 	private	 Double price;
 
 
@@ -32,6 +39,13 @@ public class SetTopBox {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
+
+	@Override
+	public String toString() {
+		return "SetTopBox [name=" + name + ", price=" + price + "]";
+	}
+	
+	
 
 
 }

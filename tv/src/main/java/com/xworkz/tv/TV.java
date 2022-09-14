@@ -1,12 +1,29 @@
 package com.xworkz.tv;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+//@Component
 public class TV {
+	
+	@Value("${BrandName}")
 	private String brand;
+	@Value("${ColorName}")
 	private String color;
+	@Value("450000")
 	private Double price;
+	
+	@Autowired
 	private Display display;
+	
+	@Autowired
 	private Remote remote;
+	
+	@Autowired
 	private SetTopBox setTopBox;
+	
+	@Autowired
 	private TVStand tvStand;
 
 	public TV() {

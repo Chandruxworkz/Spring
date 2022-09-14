@@ -1,7 +1,14 @@
 package com.xworkz.tv;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class TVStand {
+	
+	@Value("Samsung")
 	private	 String name;
+	@Value("2000")
 	private	 Double price;
 		public TVStand() {
 		System.out.println(this.getClass().getSimpleName()+"Stand bean is created");

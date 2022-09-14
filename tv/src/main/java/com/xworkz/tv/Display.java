@@ -1,7 +1,14 @@
 package com.xworkz.tv;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Display {
+	
+	@Value("5000")
 	private	Double price;
+	@Value("Samsung")
 	private	String name;
 
 		public Display() {

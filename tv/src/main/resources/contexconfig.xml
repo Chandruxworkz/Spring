@@ -2,10 +2,24 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
-        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+        <context:component-scan base-package="com.xworkz.tv"></context:component-scan>
+        <bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" value="tv.properties"></property>
+	</bean>
+	<bean class="com.xworkz.tv.TV">
 
-	 <bean class="com.xworkz.tv.TV"> 
+		<property name="brand" value="${BrandName}"></property>
+		
+	</bean>
+        
+
+	<!--  <bean class="com.xworkz.tv.TV"> 
 	 <constructor-arg name="brand" value="Sony" index="0"> </constructor-arg>
 		 <constructor-arg name="color" value="Balck" index="1"></constructor-arg>
 		 <constructor-arg name="price" value="20000.00D" index="2"></constructor-arg>
@@ -32,6 +46,6 @@
 		
 		<bean class="com.xworkz.tv.TVStand" id="st"> <constructor-arg name="name" 
 		value="SonyStand"></constructor-arg> <constructor-arg name="price" value="1000.00D"></constructor-arg> 
-		</bean>
+		</bean>-->
 
 </beans>
