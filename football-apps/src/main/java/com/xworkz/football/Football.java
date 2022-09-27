@@ -12,9 +12,9 @@ public class Football {
 
 	@Value("${xworkz}")
 	private boolean isAirFilled;
-	
+
 	private Air air;
-	
+
 	Integer i;
 
 	@Autowired
